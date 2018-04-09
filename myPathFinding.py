@@ -32,20 +32,22 @@ def findPath(G, a, b, y, z, v, row, col):
 
 
 # SETTING UP
-# This is our map, '0' means passable while anything else means not passable
-graph = [[0,0,0,0,0,0],
-         [0,5,5,5,0,0],
-         [0,5,0,5,0,0]]
-
-# Our visited list
-visited = [[False for _ in range(len(graph[0]))] for _ in range(len(graph))]
-
-# Our visited list, adjacent-rows-to-check list and adjacent-columns-to-check list
 pathFound = False
-rowToCheck = [-1, 0, 0, 1]
-colToCheck = [0, -1, 1, 0]
+def main():
+    # This is our map, '0' means passable while anything else means not passable
+    graph = [[0, 0, 0, 0, 0, 0],
+             [0, 5, 5, 5, 0, 0],
+             [0, 5, 0, 5, 0, 0]]
 
-# his is our function to find a path
-findPath(graph, 0, 5, 2, 2, visited, rowToCheck, colToCheck)
+    # Our visited list
+    visited = [[False for _ in range(len(graph[0]))] for _ in range(len(graph))]
 
+    # Adjacent-rows-to-check list and adjacent-columns-to-check list
+    rowToCheck = [-1, 0, 0, 1]
+    colToCheck = [0, -1, 1, 0]
+
+    # his is our function to find a path
+    findPath(graph, 0, 5, 2, 2, visited, rowToCheck, colToCheck)
+
+main()
 print(pathFound)
