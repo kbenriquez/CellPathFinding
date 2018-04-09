@@ -43,7 +43,7 @@ def main():
     rowToCheck = [-1, 0, 0, 1]
     colToCheck = [0, -1, 1, 0]
 
-    # his is our function to find a path
+    # This is our function to find a path
     findPath(graph, 0, 5, 2, 2, visited, rowToCheck, colToCheck)
 
 main()
