@@ -1,7 +1,7 @@
 # Kyle Marcus Enriquez
 # Python 3
 
-# G   : our map with cells
+# G       : our map with cells
 # a       : starting x coordinate
 # b       : starting y coordinate
 # y       : ending x coordinate
@@ -26,9 +26,6 @@ def findPath(G, a, b, y, z, v, row, col):
                 G[a + row[i]][b + col[i]] == 0 and          # if cell is passable
                 pathFound is False):                        # if we haven't already found a path (for early exit)
             findPath(G, a + row[i], b + col[i], y, z, v, row, col)
-
-
-
 
 
 # SETTING UP
